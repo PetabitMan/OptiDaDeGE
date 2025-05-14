@@ -28,7 +28,7 @@ class CourtCaseAnalysis(BaseModel):
 #Komplexität reduzieren
 #System Prompt auf neutralität polen
 #CoT
-def call_openai_api_with_structure(tatbestand, enriched_prompt):
+def call_openai_api_with_structure(tatbestand, enrichment):
     try:
         enrichment_block = (
             f"\n\nZusätzliche Informationen zur Entscheidungsfindung:\n{enrichment}"
@@ -104,8 +104,8 @@ def process_case_predictions(input_file, output_file):
     if not cases:
         print("Keine Fälle gefunden.")
         return
-    
-
+    #Load in Data as desired in here
+    enrichment=""
     correct_winner_count = 0
     total_cases = 0
 
@@ -113,7 +113,7 @@ def process_case_predictions(input_file, output_file):
         tatbestand = case.get("structured_content", {}).get("tatbestand")
         if tatbestand:
             #print(f"Vorhersage für Fall: {tatbestand[:50]}...")  # Kürze den Tatbestand zur Übersicht
-            predicted_tenor = call_openai_api_with_structure(tatbestand)
+            predicted_tenor = call_openai_api_with_structure(tatbestand, enrichment)
             actual_data = {
                 "winner": case.get("winner"),
             }
