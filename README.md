@@ -112,7 +112,10 @@ Nach diesen Schritten steht Ihnen eine vollständige Retrieval-Datenbasis für a
 
 ### 10. Daten
 - `enriched_cases_with_summaries.json`  (Testdaten)
-- `advanced_rag_*.,json` (Ergebnisse des Entscheidungs und Gesetzesanwendungsworkflowe)
+- `advanced_rag_*.,json` (Ergebnisse des Entscheidungs und Gesetzesanwendungsworkflow)
+- `naive_rag*.,json` (Ergebnisse des Tatbestandsähnlichkeitsworkflow)
+- `baseline_*.,json` (Ergebnisse des No Retrievals)
+
 
 ---
 
