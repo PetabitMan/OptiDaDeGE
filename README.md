@@ -49,16 +49,16 @@ Nach diesen Schritten steht Ihnen eine vollständige Retrieval-Datenbasis für a
 
 ## 📂 Verzeichnisstruktur
 
-### 1. Case Analysis & Prediction
-- `casePrediction.py`  
-  **Core-Modell**: Vorhersage von Tenor & Kostenübernahme (gpt-4o-mini)  
+### 1. Case Analysis & Prediction  
+  **Core-Modell**: Vorhersage von Tenor (gpt-4o-mini) entsprechende Daten als enrichment reinladen
 - `casePredictionSuperSimple.py`  
-  **Light-Version**: Minimalistisches Beispiel  
+  **Light-Version**: Minimalistisches Beispiel für Reasoning 
 - `casePredicitionReasoning.py`  
-  **Mit Begründungen**: Chain-of-Thought für Erklärungen  
+  **Auswerten und visualisieren der Ergebnisse**: 
 - `analysePredictions2.py`  
-  **Statistik**: Auswertung & Vergleich der Vorhersageergebnisse  
-
+  **Prototypen Workfows mit anpassbarer Struktur**: 
+- `advancedRagWorkflow.py`
+- `naiveRagWorkfloe.py`  
 ### 2. Text Processing & Embeddings
 - `generateEmbeddingsTatbestand.py`  
   **Tatbestand** → Vektoren  
@@ -111,7 +111,8 @@ Nach diesen Schritten steht Ihnen eine vollständige Retrieval-Datenbasis für a
 - `llmCritique.py`  
 
 ### 10. Daten
-- `enriched_cases_with_summaries.json`  
+- `enriched_cases_with_summaries.json`  (Testdaten)
+- `advanced_rag_*.,json` (Ergebnisse des Entscheidungs und Gesetzesanwendungsworkflowe)
 
 ---
 
